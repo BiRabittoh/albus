@@ -15,10 +15,6 @@ $(REQUIREMENTS): pyproject.toml poetry.lock
 build: $(REQUIREMENTS)
 	docker build -t $(IMAGE_NAME) .
 
-# Clean up the requirements.txt file
-clean:
-	rm -f $(REQUIREMENTS)
-
 # Utility target to run the Docker container
 run: $(ENV_FILE)
 	docker-compose up -d
