@@ -1,0 +1,8 @@
+services:
+  albus:
+    container_name: albus
+    image: albus
+    build:
+      context: .
+    env_file: .env
+    restart: unless-stopped
